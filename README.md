@@ -17,7 +17,7 @@ A project to write blogs for writers
 
 👤 **Krishna**
 
-- GitHub: [@githubhandle](https://github.com/Krishnabot)
+- GitHub: [@krishnabot](https://github.com/Krishnabot)
 - Twitter: [@last_matrix](https://twitter.com/last_matrix)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/krishna-prasad-acharya-3596bb130/)
 
@@ -41,6 +41,23 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+## 🚀 Live Demo <a name="live-demo"></a>
+
+
+- [Live Demo Link - not ready yet](#)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+
+- [ Use validations for models.] **[new_feature_1]**
+- [  unit tests for models.] **[new_feature_2]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -50,6 +67,13 @@ Feel free to check the [issues page](https://github.com/Krishnabot/my_blog_app/i
 ## Show your support
 
 Give a ⭐️ if you like this project!
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- [Web-Crunch Youtube channel](https://www.youtube.com/watch?v=5mhuNSkV_vQ&t=584s&ab_channel=Web-Crunch)
+- [APPSIMPACT Academy](https://www.youtube.com/watch?v=MLh85ol59nY&t=888s&ab_channel=APPSIMPACTAcademy)
+- [Sharma'arke Ahmed - The simplest way to understand Associations in Rails](https://medium.com/swlh/the-simplest-way-to-understand-associations-in-rails-dc03cfe067f2)
 
 ## 📝 License
 
