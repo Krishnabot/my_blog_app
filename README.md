@@ -1,73 +1,173 @@
-# Blog app
+<a name="readme-top"></a>
 
-A project to write blogs for writers
+<div align="center">
+
+  <h3><b>My Blog App</b></h3>
+
+</div>
+
+
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ (OPTIONAL)](#faq)
+- [📝 License](#license)
+
+<!-- PROJECT DESCRIPTION -->
+
+# 📖 [My Blog] <a name="about-project"></a>
+
+> Describe your project in 1 or 2 sentences.
+
+**[My blog ]** A project to write blogs for writers where 
 - user can sign in and post 
 - users can like and comment on other people posts.
 
-## Built With :hammer_and_wrench:
+## 🛠 Built With <a name="built-with"></a>
 
-- **GitHub flow:** 
-- **Linters Check:** 
-- **PostgreSQL** 
-- **Ruby**
-- **RubyonRails Framework**
+### Tech Stack <a name="tech-stack"></a>
 
-## Authors :writing_hand: :busts_in_silhouette:
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://rubyonrails.org/">Ruby On Rails</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
+
+
+### Key Features <a name="key-features"></a>
+
+
+- **PostGreSQL is set up as Database**
+- **Methods are inluded to update like post and comments**
+- **Tests and Validations are available to test methods**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+
+
+- [Live Demo - Not Ready yet]()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need:
+
+- Code Editor (VScode recommended)
+- [git](https://git-scm.com/)
+- [ruby] (https://www.ruby-lang.org/en/)
+- [rails] (https://rubyonrails.org/)
+
+```sh
+ gem install rails
+```
+### Setup
+
+Clone this repository to your desired folder:
+
+`git clone https://github.com/Krishnabot/my_blog_app.git`
+
+### Install
+
+Install this project with:
+
+```sh
+  cd my_blog_app
+  gem install
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+`rail s`
+
+### Run tests
+
+To run tests, run the following command:
+
+
+```sh
+  bin/rails test test/models/article_test.rb
+```
+
+## 👥 Authors <a name="authors"></a>
 
 
 👤 **Krishna**
 
 - GitHub: [@krishnabot](https://github.com/Krishnabot)
 - Twitter: [@last_matrix](https://twitter.com/last_matrix)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/krishna-prasad-acharya-3596bb130/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/krishnabot/)
 
-## Getting Started
-
-To Clone The Repository in your Local Machine, run:
-
-#### `git clone https://github.com/Krishnabot/my_blog_app.git`
-
-In the project directory,
-
-run 
-#### `bundle install` 
-to install necessary dependencies
-then  run
-#### `rail s`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-
-- [Live Demo Link - not ready yet](#)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ Use validations for models.] **[new_feature_1]**
-- [  unit tests for models.] **[new_feature_2]**
+- [ ] **Use controllers to handle requests and render empty views**
+- [ ] **Use params from browser requests in a safe way.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🤝 Contributing
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/Krishnabot/my_blog_app/issues).
 
-## Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Give a ⭐️ if you like this project!
-<!-- ACKNOWLEDGEMENTS -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project...
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
@@ -75,6 +175,11 @@ Give a ⭐️ if you like this project!
 - [APPSIMPACT Academy](https://www.youtube.com/watch?v=MLh85ol59nY&t=888s&ab_channel=APPSIMPACTAcademy)
 - [Sharma'arke Ahmed - The simplest way to understand Associations in Rails](https://medium.com/swlh/the-simplest-way-to-understand-associations-in-rails-dc03cfe067f2)
 
-## 📝 License
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This project is [MIT](./MIT.md) licensed.
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
