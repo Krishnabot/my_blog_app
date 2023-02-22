@@ -20,13 +20,11 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -95,8 +93,8 @@ In order to run this project you need:
 
 - Code Editor (VScode recommended)
 - [git](https://git-scm.com/)
-- [ruby] (https://www.ruby-lang.org/en/)
-- [rails] (https://rubyonrails.org/)
+- [ruby](https://www.ruby-lang.org/en/)
+- [rails](https://rubyonrails.org/)
 
 ```sh
  gem install rails
@@ -138,7 +136,7 @@ To run tests, run the following command:
 
 - GitHub: [@krishnabot](https://github.com/Krishnabot)
 - Twitter: [@last_matrix](https://twitter.com/last_matrix)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/krishnabot/)
+- LinkedIn: [@Krishnabot](https://www.linkedin.com/in/krishnabot/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -179,7 +177,7 @@ If you like this project...
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
