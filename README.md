@@ -27,11 +27,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
-
 # 📖 [My Blog] <a name="about-project"></a>
-
-> Describe your project in 1 or 2 sentences.
 
 **[My blog ]** A project to write blogs for writers where 
 - user can sign in and post 
