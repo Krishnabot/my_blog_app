@@ -22,3 +22,7 @@
   <%= f.text_field :text %>
   <%= f.submit "Add comment" %>
 <% end %>
+
+<%= form_with model: Like, url: user_post_likes_path(@user, @post) do |f| %>
+  <%= f.submit "Add like!" %>
+<% end %>
