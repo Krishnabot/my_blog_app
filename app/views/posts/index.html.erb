@@ -6,11 +6,11 @@
       <%= link_to "/users/#{@user.id}/posts/#{post.id}" do %>
         <%= render 'partials/post_card', post: post %>
       <% end %>
-      <% if post.comments_counter > 0 %>
+      <% if post.comments_counter? %>
         <div class='comments-card'>
           <% @comments = post.five_most_recent_comments %>
           <% @comments.each do |comment| %>
-            <% @users = User.where(id: comment.author_id) %>
+            <% @users = User.where(id: comment.user_id) %>
             <% @users.each do |user| %>
               <h3><%= user.name %>: <%= comment.text %></h3>
             <% end %>

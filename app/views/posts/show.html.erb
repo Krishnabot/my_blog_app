@@ -5,11 +5,11 @@
   </div>
   <h3><%= @post.text %></h3>
 </div>
-<% if @post.comments_counter > 0 %>
+<% if @post.comments_counter? %>
   <div class='post-comments'>
     <% @comments = Comment.where(post_id: @post.id) %>
     <% @comments.each do |comment| %>
-      <% @users = User.where(id: comment.author_id) %>
+      <% @users = User.where(id: comment.user_id) %>
       <% @users.each do |user| %>
         <h4><%= user.name %>: <%= comment.text %></h4>
       <% end %>
