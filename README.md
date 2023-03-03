@@ -67,6 +67,8 @@
 - **Tests and Validations are available to test methods**
 - **Use controllers to handle requests and render empty views**
 - **Tests and Validations are tested and available for controlls**
+- **Use params from browser requests in a safe way.**
+- **Use layouts and templates for shared content.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,8 +144,6 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-
-- [ ] **Use params from browser requests in a safe way.**
 - [ ] **Use layouts and templates for shared content.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
