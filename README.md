@@ -66,6 +66,7 @@
 - **Methods are inluded to update like post and comments**
 - **Tests and Validations are available to test methods**
 - **Use controllers to handle requests and render empty views**
+- **Tests and Validations are tested and available for controlls**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,6 +144,7 @@ To run tests, run the following command:
 
 
 - [ ] **Use params from browser requests in a safe way.**
+- [ ] **Use layouts and templates for shared content.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
