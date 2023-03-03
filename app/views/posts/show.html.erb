@@ -18,11 +18,6 @@
 <% else %>
   <div class='post-comments'>No comments Available</div>
 <% end %>
-<%= form_with model: Comment, url: user_post_comments_path(@user, @post) do |f| %>
-  <%= f.text_field :text %>
-  <%= f.submit "Add comment" %>
-<% end %>
-
 <%= form_with model: Like, url: user_post_likes_path(@user, @post) do |f| %>
   <%= f.submit "Add like!" %>
 <% end %>

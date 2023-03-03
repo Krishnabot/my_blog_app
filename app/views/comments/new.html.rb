@@ -1,0 +1,4 @@
+<%= form_with model: @comment, url: user_post_comments_path do |f| %>
+  <%= f.text_field :text %>
+  <%= f.submit "Add comment" %>
+<% end %>
