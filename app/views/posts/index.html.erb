@@ -1,4 +1,6 @@
+<%= render 'partials/user_card', user: @user %>
 <ul class='posts-list'>
+<% if @posts.present? %>
   <% @posts.each do |post| %>
     <li>
       <%= link_to "/users/#{@user.id}/posts/#{post.id}" do %>
@@ -10,7 +12,7 @@
           <% @comments.each do |comment| %>
             <% @users = User.where(id: comment.author_id) %>
             <% @users.each do |user| %>
-              <h4><%= user.name %>: <%= comment.text %></h4>
+              <h3><%= user.name %>: <%= comment.text %></h3>
             <% end %>
           <% end %>
         </div>
@@ -19,4 +21,5 @@
       <% end %>
     </li>
   <% end %>
+<% end %>
 </ul>
