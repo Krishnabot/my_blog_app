@@ -1,6 +1,6 @@
 <div class='post'>
   <div class='post-header'>
-    <h3>Post #<%= @post.id %> by <%= @user.name %></h3>
+    <h3><%= @post.title %> by <%= @user.name %></h3>
     <h5>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></h5>
   </div>
   <h3><%= @post.text %></h3>
