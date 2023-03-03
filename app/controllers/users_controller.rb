@@ -3,5 +3,8 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def show; end
+  def show
+    @user = User.find(param[:id])
+    @post = @user.last_3_posts
+  end
 end
