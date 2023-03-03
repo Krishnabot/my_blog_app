@@ -1,1 +1,25 @@
-<h1>All the Post for the Current User</h1>
+<%= render 'partials/user_card', user: @user %>
+<ul class='posts-list'>
+<% if @posts.present? %>
+  <% @posts.each do |post| %>
+    <li>
+      <%= link_to "/users/#{@user.id}/posts/#{post.id}" do %>
+        <%= render 'partials/post_card', post: post %>
+      <% end %>
+      <% if post.comments_counter? %>
+        <div class='comments-card'>
+          <% @comments = post.five_most_recent_comments %>
+          <% @comments.each do |comment| %>
+            <% @users = User.where(id: comment.user_id) %>
+            <% @users.each do |user| %>
+              <h3><%= user.name %>: <%= comment.text %></h3>
+            <% end %>
+          <% end %>
+        </div>
+      <% else %>
+        <div class='comments-card'>No comments Available</div>
+      <% end %>
+    </li>
+  <% end %>
+<% end %>
+</ul>
