@@ -1,1 +1,20 @@
-<h1>More information about the Post<h1>
+<div class='post'>
+  <div class='post-header'>
+    <h3>Post #<%= @post.id %> by <%= @user.name %></h3>
+    <h5>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></h5>
+  </div>
+  <h3><%= @post.text %></h3>
+</div>
+<% if @post.comments_counter > 0 %>
+  <div class='post-comments'>
+    <% @comments = Comment.where(post_id: @post.id) %>
+    <% @comments.each do |comment| %>
+      <% @users = User.where(id: comment.author_id) %>
+      <% @users.each do |user| %>
+        <h4><%= user.name %>: <%= comment.text %></h4>
+      <% end %>
+    <% end %>
+  </div>
+<% else %>
+  <div class='post-comments'>No comments Available</div>
+<% end %>

@@ -5,7 +5,7 @@
         <%= render 'partials/post_card', post: post %>
       <% end %>
       <% if post.comments_counter > 0 %>
-        <div class='comments-box'>
+        <div class='comments-card'>
           <% @comments = post.five_most_recent_comments %>
           <% @comments.each do |comment| %>
             <% @users = User.where(id: comment.author_id) %>
@@ -15,7 +15,7 @@
           <% end %>
         </div>
       <% else %>
-        <div class='comments-box'>No comments Available</div>
+        <div class='comments-card'>No comments Available</div>
       <% end %>
     </li>
   <% end %>
