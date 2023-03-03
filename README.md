@@ -65,6 +65,7 @@
 - **PostGreSQL is set up as Database**
 - **Methods are inluded to update like post and comments**
 - **Tests and Validations are available to test methods**
+- **Use controllers to handle requests and render empty views**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -141,7 +142,6 @@ To run tests, run the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **Use controllers to handle requests and render empty views**
 - [ ] **Use params from browser requests in a safe way.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
