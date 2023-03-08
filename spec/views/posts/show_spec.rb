@@ -18,32 +18,32 @@ RSpec.describe 'Post', type: :system do
                           user: @user)
     end
 
-    it 'shows the post title' do
+    it 'Should display the post title' do
       visit "/users/#{@user.id}/posts/#{@post.id}"
       expect(page).to have_content(@post.title)
     end
 
-    it 'shows who wrote the post' do
+    it 'Should display wrote the post' do
       visit "/users/#{@user.id}/posts/#{@post.id}"
       expect(page).to have_content(@user.name)
     end
 
-    it 'shows how many comments it has' do
+    it 'Should display how many comments it has' do
       visit "/users/#{@user.id}/posts/#{@post.id}"
       expect(page).to have_content(@post.comments_counter)
     end
 
-    it 'shows how many likes it has' do
+    it 'Should display how many likes it has' do
       visit "/users/#{@user.id}/posts/#{@post.id}"
       expect(page).to have_content(@post.likes_counter)
     end
 
-    it 'shows the post body' do
+    it 'Should display the post body' do
       visit "/users/#{@user.id}/posts/#{@post.id}"
       expect(page).to have_content(@post.text)
     end
 
-    it 'shows the username of each comment' do
+    it 'Should display the username of each comment' do
       Comment.create(user: @user2, post: @post, text: 'Hi Tom!')
       @post.update(comments_counter: 1)
       @comments = Comment.where(post: @post.id)
@@ -53,7 +53,7 @@ RSpec.describe 'Post', type: :system do
       end
     end
 
-    it 'shows the comment of each username' do
+    it 'Should display the comment of each username' do
       Comment.create(user: @user2, post: @post, text: 'Hi Tom!')
       @post.update(comments_counter: 1)
       @comments = Comment.where(post: @post.id)
