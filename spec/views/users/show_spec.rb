@@ -1,37 +1,55 @@
 require 'rails_helper'
-RSpec.describe 'User', type: :feature do
-  before(:each) do
-    @user = User.create(
-      name: 'Kiploman',
-      bio: 'Graphic designer',
-      photo: 'http://hello.com/org.png',
+
+RSpec.describe 'User', type: :system do
+  describe 'show page' do
+    before :each do
+     @user = User.create(
+      name: 'John',
+      bio: 'Software Developer',
+      photo: 'http://hello1.com/org.png',
       posts_counter: 0
     )
-  end
-  describe 'show page' do
-    it "has users's username." do
-      visit "/users/#{@user.id}"
-      expect(page).to have_content(@user.name)
+      visit user_path(@user.id)
     end
-    it "has users's bio." do
-      visit "/users/#{@user.id}"
-      expect(page).to have_content(@user.bio)
-    end
-    it 'should have the profile picture' do
-      visit "/users/#{@user.id}"
+
+    it 'shows profile picture of the user' do
       expect(page).to have_content(@user.photo)
     end
-    it 'has link to all posts' do
-      visit "/users/#{@user.id}"
-      expect(page).to have_link('See all posts')
+
+    it 'shows name of the user' do
+      expect(page).to have_content(@user.name)
     end
-    it 'has recent three posts' do
-      visit "/users/#{@user.id}"
-      expect(page).to have_selector('.user-no-of-posts', count: 1)
-    end
-    it 'has users number of posts' do
-      visit "/users/#{@user.id}"
+
+    it 'shows the number of posts the user has written' do
       expect(page).to have_content("Number of posts: #{@user.posts_counter}")
+    end
+
+    it 'shows the bio of the user' do
+      expect(page).to have_content(@user.bio)
+    end
+
+    it 'shows users first 3 posts' do
+      @posts = @user.last_3_posts
+      @posts.each do |post|
+        expect(page).to have_content(post.text)
+      end
+    end
+
+    it 'shows the see all post button' do
+      expect(page).to have_content('See all posts')
+    end
+
+    it 'redirects to the me to that posts show page when clicked' do
+      @posts = @user.last_3_posts
+      @posts.each do |post|
+        click_on(post.text)
+        expect(page).to have_current_path("/users/#{@user.id}/posts/#{post.id}")
+      end
+    end
+
+    it 'redirects to user posts index when cliked' do
+      click_link('See all posts')
+      expect(page).to have_current_path("/users/#{@user.id}/posts")
     end
   end
 end
