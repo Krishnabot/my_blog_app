@@ -1,7 +1,10 @@
 <ul class='user-list'>
   <% @users.each do |user| %>
     <%= link_to user_path(user.id) do %>
-      <li><%= render 'partials/user_card', user: user %></li>
+      <li>
+      <%= render 'partials/user_card', user: user %></li>
+      <%= link_to 'show user', user_path(user.id), class: 'btn btn-primary' %>
+      </li>
     <% end %>
   <% end %>
 </ul>
