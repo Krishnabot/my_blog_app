@@ -69,6 +69,9 @@
 - **Tests and Validations are tested and available for controlls**
 - **Use params from browser requests in a safe way.**
 - **Use layouts and templates for shared content.**
+- **Secure app from n+1 problems**
+- **Write integration tests with Capybara gem.**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -138,6 +141,14 @@ To run tests, run the following command:
 - Twitter: [@last_matrix](https://twitter.com/last_matrix)
 - LinkedIn: [@Krishnabot](https://www.linkedin.com/in/krishnabot/)
 
+#### 👥 Contributors ####
+
+👤 **Josphat Kiploman**
+
+- GitHub: [@github](https://github.com/Josphat205)
+- Twitter: [@twitter](https://twitter.com/josphatloman)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/josphat205)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -145,6 +156,8 @@ To run tests, run the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Use layouts and templates for shared content.**
+- [ ] **Use devise gem for authentication.**
+- [ ] **Build a web app that requires the user to log in.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
