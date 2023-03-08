@@ -3,12 +3,12 @@ require 'rails_helper'
 RSpec.describe 'User', type: :system do
   describe 'show page' do
     before :each do
-     @user = User.create(
-      name: 'John',
-      bio: 'Software Developer',
-      photo: 'http://hello1.com/org.png',
-      posts_counter: 0
-    )
+      @user = User.create(
+        name: 'John',
+        bio: 'Software Developer',
+        photo: 'http://hello1.com/org.png',
+        posts_counter: 0
+      )
       visit user_path(@user.id)
     end
 
