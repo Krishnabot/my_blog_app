@@ -73,6 +73,7 @@
 - **Write integration tests with Capybara gem.**
 - **Use devise gem for authentication.**
 - **Add ffunctionality to the web app that requires the user to log in.**
+- **Limit access to web app resources based on authorization rules**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -158,7 +159,6 @@ To run tests, run the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Use layouts and templates for shared content.**
-- [ ] **Limit access to web app resources based on authorization rules**
 - [ ] **Build an API that is RESTful**
 - [ ] **Understand importance of APIs and docs following standards**
 
