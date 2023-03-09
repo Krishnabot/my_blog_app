@@ -2,6 +2,7 @@
 
 class Ability
   include CanCan::Ability
+  def initialize(user)
    return if user.blank?
     can :destroy, Post do |post|
       post.user == user || user.role == 'admin'
