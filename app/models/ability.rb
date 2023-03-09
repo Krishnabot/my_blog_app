@@ -2,12 +2,12 @@
 
 class Ability
   include CanCan::Ability
-
+   return if user.blank?
     can :destroy, Post do |post|
       post.user == user || user.role == 'admin'
     end
     can :destroy, Comment do |comment|
-      comment.user == user || user.role == ‘admin’
+      comment.user == user || user.role == 'admin'
     end
     # Define abilities for the user here. For example:
     #

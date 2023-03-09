@@ -12,9 +12,12 @@
       <% @users = User.where(id: comment.user_id) %>
       <% @users.each do |user| %>
         <h4><%= user.name %>: <%= comment.text %></h4>
-        <% if can? :destroy, comment %>
-          <%= button_to ‘Delete comment’, user_post_path, method: :delete %>
+        <div class="comment-card">
+          <% if can? :destroy, comment %>
+          <%= button_to 'Delete comment', user_post_path, method: :delete %>
         <% end %>
+
+        </div>
       <% end %>
     <% end %>
   </div>
