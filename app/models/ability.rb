@@ -3,7 +3,9 @@
 class Ability
   include CanCan::Ability
 
-  def initialize(user)
+    can :destroy, Post do |post|
+      post.user == user || user.role == 'admin'
+    end
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?

@@ -21,3 +21,6 @@
 <%= form_with model: Like, url: user_post_likes_path(@user, @post) do |f| %>
   <%= f.submit "Add like!" %>
 <% end %>
+<% if can? :destroy, @post %>
+  <%= button_to 'Delete Post', user_post_path, method: :delete %>
+<% end %>
