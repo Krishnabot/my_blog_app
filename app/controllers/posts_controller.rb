@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   load_and_authorize_resource
   def index
     @user = User.includes(:posts).find(params[:user_id])
-    @posts = @user.posts.includes(:user)
+    @post = @user.post.includes(:user)
   end
 
   def show
