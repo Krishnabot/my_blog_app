@@ -10,7 +10,7 @@ class User < ApplicationRecord
   validates :posts_counter,
             numericality: { only_integer: true, greater_than_or_equal_to: 0,
                             message: 'must be an integer greater than or equal to zero' }
-  
+
   def posts_counter
     super || 0
   end
@@ -18,5 +18,4 @@ class User < ApplicationRecord
   def last_3_posts
     posts.order(created_at: :desc).limit(3)
   end
-
 end

@@ -6,8 +6,7 @@ class PostsController < ApplicationController
     @posts = @user.posts.includes(:user)
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @post = @user.posts.new
