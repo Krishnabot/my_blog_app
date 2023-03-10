@@ -1,43 +1,39 @@
 class PostsController < ApplicationController
-  before_action :load_user
-  load_and_authorize_resource
+  load_and_authorize_resource param_method: :my_sanitizer
 
   def index
-    @posts = @user.posts.includes(:user)
+    @user = User.find(params[:user_id])
+    @posts = Post.includes(:user).where(user_id: params[:user_id])
   end
 
-  def show; end
+  def show
+    @post = Post.find(params[:id])
+    @user = User.find(@post.user_id)
+  end
 
   def new
-    @post = @user.posts.new
+    @post = Post.new
   end
 
   def create
-    @post = @user.posts.new(form_params)
+    @post = Post.new(my_sanitizer.merge(user: current_user, likes_counter: 0, comments_counter: 0))
 
     if @post.save
-      redirect_to user_posts_url(@user)
+      redirect_to user_posts_url
     else
       render :new
     end
   end
 
   def destroy
+    @post = Post.find(params[:id])
     @post.destroy
-    redirect_to user_posts_path(@user)
+    redirect_to user_posts_path
   end
 
   private
 
-  def load_user
-    @user = User.includes(:posts).find(params[:user_id])
-  end
-
-  def form_params
-    params.require(:post).permit(:title, :text).merge(user: current_user, likes_counter: 0, comments_counter: 0)
-  end
-
-  def set_post
-    @post = Post.find(params[:id])
+  def my_sanitizer
+    params.require(:post).permit(:title, :text)
   end
 end
