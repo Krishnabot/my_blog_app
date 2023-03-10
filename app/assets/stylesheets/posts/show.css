@@ -14,9 +14,14 @@ h5 {
   margin-top: 0;
 }
 
+.comment-card {
+  display: flex;
+  justify-content: space-between;
+}
+
 .post-comments {
   border: solid 2.5px black;
-  width: 470px;
+  width: 500px;
   margin-top: 5px;
 }
 

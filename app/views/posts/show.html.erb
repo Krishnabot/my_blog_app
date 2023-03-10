@@ -5,19 +5,27 @@
   </div>
   <h3><%= @post.text %></h3>
 </div>
-<% if @post.comments_counter? %>
+<% if @post.comments_counter > 0 %>
   <div class='post-comments'>
     <% @comments = Comment.where(post_id: @post.id) %>
     <% @comments.each do |comment| %>
       <% @users = User.where(id: comment.user_id) %>
       <% @users.each do |user| %>
-        <h4><%= user.name %>: <%= comment.text %></h4>
+        <div class='comment-item'>
+          <h4><%= user.name %>: <%= comment.text %></h4>
+          <% if can? :destroy, comment %>
+            <%= button_to 'Delete comment', user_post_comment_url(comment.user, @post, comment), method: :delete %>
+          <% end %>
+        </div>
       <% end %>
     <% end %>
   </div>
 <% else %>
-  <div class='post-comments'>No comments Available</div>
+  <div class='post-comments'>No comments yet</div>
 <% end %>
 <%= form_with model: Like, url: user_post_likes_path(@user, @post) do |f| %>
   <%= f.submit "Add like!" %>
+<% end %>
+<% if can? :destroy, @post %>
+  <%= button_to 'Delete post', user_post_path, method: :delete %>
 <% end %>
